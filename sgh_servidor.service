@@ -1,11 +1,13 @@
 [Unit]
 Description=Sistema gestor de horarios
+After=mysql.service
+Requires=mysql.service
 
 [Service]
 User=david
 
-WorkingDirectory=/home/david/sghservidor
-ExecStart=/home/david/sghservidor/sgh_servidor
+WorkingDirectory=/home/ubuntu/sgh_servidor_v2
+ExecStart=/home/ubuntu/sgh_servidor_v2/sgh_servidor.sh
 
 SuccessExitStatus=143
 TimeoutStopSec=10
